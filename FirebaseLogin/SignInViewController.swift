@@ -31,7 +31,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 if error == nil {
                     print("Success!");
                 }else{
-                    print(error)
+                    print(error ?? "Error")
                 }
             })
         
