@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+    
+    var datas = ["Online Chat"]
+    
+    @IBOutlet weak var tableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        self.tableView.dataSource = self
+        self.tableView.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,5 +38,30 @@ class MainViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return datas.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        cell.textLabel?.text = "\(datas[indexPath.row])"
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let chose = datas[indexPath.row]
+        self.performSegue(withIdentifier: "\(chose)", sender: self)
+    }
+    
+    @IBAction func logoutAccountAction(_ sender: Any) {
+        let auth = FIRAuth.auth()
+        do {
+            try auth?.signOut()
+            self.dismiss(animated: true, completion: nil)
+            print("Logged out!")
+        }catch{
+            print(error)
+        }
+    }
 
 }

@@ -99,6 +99,7 @@ class ChatViewCell: UITableViewCell {
             self.contentLbl.font = UIFont.FontStyleNormal
             self.contentLbl.textAlignment = data?.role == Role.sender ? NSTextAlignment.right : NSTextAlignment.left
             
+            //2.设置约束
             let vd = ["headerImgView": self.headerImgView, "content": self.contentLbl, "bubble": self.bubbleImgView] as [String : Any]
             let header_constraint_H_Format = data?.role == Role.sender ? "[headerImgView(50)]-5-|" : "|-5-[headerImgView(50)]"
             let header_constraint_V_Format = data?.role == Role.sender ? "V:|-5-[headerImgView(50)]" : "V:|-5-[headerImgView(50)]"

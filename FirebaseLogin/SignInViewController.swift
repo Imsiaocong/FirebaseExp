@@ -36,6 +36,18 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
             })
         
     }
+    
+    @IBAction func loginAccountAction(_ sender: Any) {
+        let auth = FIRAuth.auth()
+        auth?.signIn(withEmail: usernameField.text!, password: passwordField.text!, completion: { (user: FIRUser?, error) in
+            if error == nil {
+                print("Success!")
+                self.performSegue(withIdentifier: "loggedIn", sender: self)
+            }else{
+                print("Oops!")
+            }
+        })
+    }
 
 }
 

@@ -60,6 +60,15 @@ class ChatViewController: UIViewController , UITextFieldDelegate {
         
     }
     
+    @IBAction func quitAction(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        get {
+            return true
+        }
+    }
     
     func renderTableView(_ sender : UIButton){
         
@@ -102,6 +111,8 @@ extension ChatViewController {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return true
     }
+    
+    
 }
 
 
