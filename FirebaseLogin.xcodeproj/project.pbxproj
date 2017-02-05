@@ -10,6 +10,7 @@
 		865664FE1E36E0DD00AF0B8F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 865664FD1E36E0DD00AF0B8F /* MainViewController.swift */; };
 		86A8AC0C1E39A6DB001455CE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8AC0B1E39A6DB001455CE /* ChatViewController.swift */; };
 		86A8AC0E1E39A70E001455CE /* ChatTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86A8AC0D1E39A70E001455CE /* ChatTableView.swift */; };
+		86C2ED4E1E46D2ED00C6CDF9 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86C2ED4D1E46D2ED00C6CDF9 /* Server.swift */; };
 		86F3E9571E35A8FA00A33625 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F3E9561E35A8FA00A33625 /* AppDelegate.swift */; };
 		86F3E9591E35A8FA00A33625 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F3E9581E35A8FA00A33625 /* SignInViewController.swift */; };
 		86F3E95C1E35A8FA00A33625 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86F3E95A1E35A8FA00A33625 /* Main.storyboard */; };
@@ -48,6 +49,7 @@
 		865664FD1E36E0DD00AF0B8F /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		86A8AC0B1E39A6DB001455CE /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		86A8AC0D1E39A70E001455CE /* ChatTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableView.swift; sourceTree = "<group>"; };
+		86C2ED4D1E46D2ED00C6CDF9 /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		86F3E9531E35A8FA00A33625 /* FirebaseLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F3E9561E35A8FA00A33625 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86F3E9581E35A8FA00A33625 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		86041C081E46F2AF00A3DB2A /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				86A8AC0D1E39A70E001455CE /* ChatTableView.swift */,
+				86A8AC0B1E39A6DB001455CE /* ChatViewController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		86041C091E46F2BF00A3DB2A /* Story Board */ = {
+			isa = PBXGroup;
+			children = (
+				86F3E95F1E35A8FA00A33625 /* LaunchScreen.storyboard */,
+				86F3E95A1E35A8FA00A33625 /* Main.storyboard */,
+			);
+			name = "Story Board";
+			sourceTree = "<group>";
+		};
+		86041C0A1E46F2F200A3DB2A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				865664FD1E36E0DD00AF0B8F /* MainViewController.swift */,
+				86F3E9581E35A8FA00A33625 /* SignInViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		86C2ED4C1E46D2D700C6CDF9 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				86C2ED4D1E46D2ED00C6CDF9 /* Server.swift */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
 		86F3E94A1E35A8FA00A33625 = {
 			isa = PBXGroup;
 			children = (
@@ -123,13 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				86F3E9561E35A8FA00A33625 /* AppDelegate.swift */,
-				86F3E9581E35A8FA00A33625 /* SignInViewController.swift */,
-				865664FD1E36E0DD00AF0B8F /* MainViewController.swift */,
-				86F3E95A1E35A8FA00A33625 /* Main.storyboard */,
-				86A8AC0B1E39A6DB001455CE /* ChatViewController.swift */,
-				86A8AC0D1E39A70E001455CE /* ChatTableView.swift */,
+				86041C0A1E46F2F200A3DB2A /* Controllers */,
+				86C2ED4C1E46D2D700C6CDF9 /* Server */,
+				86041C081E46F2AF00A3DB2A /* Chat */,
+				86041C091E46F2BF00A3DB2A /* Story Board */,
 				86F3E95D1E35A8FA00A33625 /* Assets.xcassets */,
-				86F3E95F1E35A8FA00A33625 /* LaunchScreen.storyboard */,
 				86F3E9621E35A8FA00A33625 /* Info.plist */,
 				86F3E9841E35B23F00A33625 /* GoogleService-Info.plist */,
 			);
@@ -466,6 +501,7 @@
 				86A8AC0E1E39A70E001455CE /* ChatTableView.swift in Sources */,
 				86F3E9591E35A8FA00A33625 /* SignInViewController.swift in Sources */,
 				86A8AC0C1E39A6DB001455CE /* ChatViewController.swift in Sources */,
+				86C2ED4E1E46D2ED00C6CDF9 /* Server.swift in Sources */,
 				86F3E9571E35A8FA00A33625 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
